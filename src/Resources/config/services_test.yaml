@@ -1,0 +1,15 @@
+# DataFixtures 服务配置 - 仅在测试环境使用
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  # DataFixtures 自动装配
+  Tourze\AntiFraudBundle\DataFixtures\:
+    resource: '../../DataFixtures/'
+    tags: ['doctrine.fixture.orm']
+
+  # 在测试环境中禁用反欺诈事件订阅器的另一种方式（可选）
+  # 主要通过环境变量 ANTIFRAUD_ENABLED=false 控制
+

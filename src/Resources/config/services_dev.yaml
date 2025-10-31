@@ -1,0 +1,11 @@
+# DataFixtures 服务配置 - 仅在开发环境使用
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  # DataFixtures 自动装配
+  Tourze\AntiFraudBundle\DataFixtures\:
+    resource: '../../DataFixtures/'
+    tags: ['doctrine.fixture.orm']

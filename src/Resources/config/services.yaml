@@ -1,0 +1,43 @@
+# AntiFraud Bundle 服务配置
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  # 明确注册服务目录
+  Tourze\AntiFraudBundle\Detector\:
+    resource: '../../Detector/'
+    
+  Tourze\AntiFraudBundle\EventSubscriber\:
+    resource: '../../EventSubscriber/'
+    
+  Tourze\AntiFraudBundle\EventListener\:
+    resource: '../../EventListener/'
+    
+  Tourze\AntiFraudBundle\Rule\:
+    resource: '../../Rule/'
+    
+  Tourze\AntiFraudBundle\Service\:
+    resource: '../../Service/'
+    
+  # 明确定义 RiskScorer 服务以便测试中使用
+  Tourze\AntiFraudBundle\Service\RiskScorer:
+    public: true
+    
+  # Repository 服务
+  Tourze\AntiFraudBundle\Repository\:
+    resource: '../../Repository/'
+    public: true
+    
+  # Controller 服务
+  Tourze\AntiFraudBundle\Controller\:
+    resource: '../../Controller/'
+    tags: ['controller.service_arguments']
+
+  # Interface aliases
+  Tourze\AntiFraudBundle\Contract\Service\DataCollectorInterface:
+    alias: Tourze\AntiFraudBundle\Service\DataCollectorImpl
+
+  Tourze\AntiFraudBundle\Contract\Rule\RuleEngineInterface:
+    alias: Tourze\AntiFraudBundle\Rule\Engine\DynamicRuleEngine
