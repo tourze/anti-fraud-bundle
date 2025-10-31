@@ -33,9 +33,9 @@
     "symfony/security-core": "^7.3",
     "symfony/yaml": "^7.3",
     "tourze/bundle-dependency": "1.*",
-    "tourze/doctrine-indexed-bundle": "0.0.*",
+    "tourze/doctrine-indexed-bundle": "1.0.*",
     "tourze/doctrine-timestamp-bundle": "0.0.*",
-    "tourze/easy-admin-enum-field-bundle": "0.0.*",
+    "tourze/easy-admin-enum-field-bundle": "1.0.*",
     "tourze/easy-admin-menu-bundle": "0.1.*",
     "tourze/enum-extra": "1.*",
     "tourze/symfony-dependency-service-loader": "1.*"
