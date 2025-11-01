@@ -38,8 +38,8 @@
     "tourze/doctrine-timestamp-bundle": "1.0.*",
     "tourze/easy-admin-enum-field-bundle": "1.0.*",
     "tourze/easy-admin-menu-bundle": "1.0.*",
-    "tourze/enum-extra": "1.*",
-    "tourze/symfony-dependency-service-loader": "1.*"
+    "tourze/enum-extra": "1.0.*",
+    "tourze/symfony-dependency-service-loader": "1.0.*"
   },
   "require-dev": {
     "phpstan/phpstan": "^2.1",
