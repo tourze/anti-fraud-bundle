@@ -10,6 +10,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Tourze\BundleDependency\BundleDependencyInterface;
 use Tourze\DoctrineIndexedBundle\DoctrineIndexedBundle;
 use Tourze\DoctrineTimestampBundle\DoctrineTimestampBundle;
+use Tourze\EasyAdminMenuBundle\EasyAdminMenuBundle;
 
 class AntiFraudBundle extends Bundle implements BundleDependencyInterface
 {
@@ -20,6 +21,7 @@ class AntiFraudBundle extends Bundle implements BundleDependencyInterface
             DoctrineTimestampBundle::class => ['all' => true],
             DoctrineIndexedBundle::class => ['all' => true],
             SecurityBundle::class => ['all' => true],
+            EasyAdminMenuBundle::class => ['all' => true],
         ];
     }
 }
