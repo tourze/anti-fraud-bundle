@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tourze\AntiFraudBundle\Tests\Entity;
 
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Tourze\AntiFraudBundle\Entity\Rule;
 use Tourze\AntiFraudBundle\Enum\RiskLevel;
 use Tourze\PHPUnitDoctrineEntity\AbstractEntityTestCase;
@@ -14,7 +13,6 @@ use Tourze\PHPUnitDoctrineEntity\AbstractEntityTestCase;
  * @internal
  */
 #[CoversClass(Rule::class)]
-#[RunTestsInSeparateProcesses]
 final class RuleTest extends AbstractEntityTestCase
 {
     protected function createEntity(): object

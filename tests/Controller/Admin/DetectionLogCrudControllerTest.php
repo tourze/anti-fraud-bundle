@@ -9,7 +9,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Contracts\Field\FieldInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
-use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Tourze\AntiFraudBundle\Controller\Admin\DetectionLogCrudController;
 use Tourze\AntiFraudBundle\Entity\DetectionLog;
 use Tourze\PHPUnitSymfonyWebTest\AbstractEasyAdminControllerTestCase;
@@ -22,25 +21,6 @@ use Tourze\PHPUnitSymfonyWebTest\AbstractEasyAdminControllerTestCase;
 #[RunTestsInSeparateProcesses]
 final class DetectionLogCrudControllerTest extends AbstractEasyAdminControllerTestCase
 {
-    /**
-     * 覆盖父类方法，修复客户端设置问题
-     *
-     * AbstractEasyAdminControllerTestCase::testUnauthenticatedAccessDenied() 中的
-     * createClientWithDatabase() 没有调用 self::getClient($client) 设置静态客户端实例，
-     * 导致 Symfony 断言系统无法获取客户端，抛出 "A client must be set" 错误。
-     *
-     * @param array<string, mixed> $options 选项
-     * @param array<string, mixed> $server 服务器参数
-     * @return KernelBrowser 正确设置的客户端实例
-     */
-    protected static function createClientWithDatabase(array $options = [], array $server = []): KernelBrowser
-    {
-        $client = parent::createClientWithDatabase($options, $server);
-        self::getClient($client); // 设置静态客户端实例，确保 Symfony 断言可以正常工作
-
-        return $client;
-    }
-
     protected function getControllerService(): DetectionLogCrudController
     {
         return self::getService(DetectionLogCrudController::class);

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tourze\AntiFraudBundle\Tests\Enum;
 
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Tourze\AntiFraudBundle\Enum\RiskLevel;
 use Tourze\PHPUnitEnum\AbstractEnumTestCase;
 
@@ -13,7 +12,6 @@ use Tourze\PHPUnitEnum\AbstractEnumTestCase;
  * @internal
  */
 #[CoversClass(RiskLevel::class)]
-#[RunTestsInSeparateProcesses]
 final class RiskLevelTest extends AbstractEnumTestCase
 {
     public function testRiskLevelValues(): void

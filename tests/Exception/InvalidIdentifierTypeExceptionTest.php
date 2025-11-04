@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tourze\AntiFraudBundle\Tests\Exception;
 
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Tourze\AntiFraudBundle\Exception\InvalidIdentifierTypeException;
 use Tourze\PHPUnitBase\AbstractExceptionTestCase;
 
@@ -13,7 +12,6 @@ use Tourze\PHPUnitBase\AbstractExceptionTestCase;
  * @internal
  */
 #[CoversClass(InvalidIdentifierTypeException::class)]
-#[RunTestsInSeparateProcesses]
 final class InvalidIdentifierTypeExceptionTest extends AbstractExceptionTestCase
 {
     public function testConstructWithInvalidType(): void
