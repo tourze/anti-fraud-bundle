@@ -98,7 +98,7 @@ class MetricsCollectorImpl implements MetricsCollector
             return match ($unit) {
                 'm' => $value * 60,
                 'h' => $value * 3600,
-                'd' => $value * 86400,  /* @phpstan-ignore-line match.alwaysTrue */
+                'd' => $value * 86400,
                 default => 3600, // Default to 1 hour
             };
         }
