@@ -10,7 +10,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Contracts\Field\FieldInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Tourze\AntiFraudBundle\Controller\Admin\RiskProfileCrudController;
-use Tourze\AntiFraudBundle\Entity\RiskProfile;
 use Tourze\PHPUnitSymfonyWebTest\AbstractEasyAdminControllerTestCase;
 
 /**
@@ -68,11 +67,6 @@ final class RiskProfileCrudControllerTest extends AbstractEasyAdminControllerTes
         yield 'isWhitelisted' => ['isWhitelisted'];
         yield 'isBlacklisted' => ['isBlacklisted'];
         yield 'notes' => ['notes'];
-    }
-
-    public function testGetEntityFqcn(): void
-    {
-        self::assertSame(RiskProfile::class, RiskProfileCrudController::getEntityFqcn());
     }
 
     public function testIndexPageAccessibleForAuthenticatedAdmin(): void

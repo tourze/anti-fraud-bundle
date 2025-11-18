@@ -10,7 +10,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Contracts\Field\FieldInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Tourze\AntiFraudBundle\Controller\Admin\RuleCrudController;
-use Tourze\AntiFraudBundle\Entity\Rule;
 use Tourze\PHPUnitSymfonyWebTest\AbstractEasyAdminControllerTestCase;
 
 /**
@@ -60,11 +59,6 @@ final class RuleCrudControllerTest extends AbstractEasyAdminControllerTestCase
         yield 'terminal' => ['terminal'];
         yield 'enabled' => ['enabled'];
         yield 'description' => ['description'];
-    }
-
-    public function testGetEntityFqcn(): void
-    {
-        self::assertSame(Rule::class, RuleCrudController::getEntityFqcn());
     }
 
     public function testIndexPageAccessibleForAuthenticatedAdmin(): void

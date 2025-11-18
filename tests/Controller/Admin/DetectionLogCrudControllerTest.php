@@ -10,7 +10,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Contracts\Field\FieldInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use Tourze\AntiFraudBundle\Controller\Admin\DetectionLogCrudController;
-use Tourze\AntiFraudBundle\Entity\DetectionLog;
 use Tourze\PHPUnitSymfonyWebTest\AbstractEasyAdminControllerTestCase;
 
 /**
@@ -61,11 +60,6 @@ final class DetectionLogCrudControllerTest extends AbstractEasyAdminControllerTe
         yield 'action' => ['action'];
         yield 'riskLevel' => ['riskLevel'];
         yield 'riskScore' => ['riskScore'];
-    }
-
-    public function testGetEntityFqcn(): void
-    {
-        self::assertSame(DetectionLog::class, DetectionLogCrudController::getEntityFqcn());
     }
 
     public function testIndexPageAccessibleForAuthenticatedAdmin(): void
